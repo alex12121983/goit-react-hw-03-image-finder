@@ -1,5 +1,4 @@
 import axios from 'axios';
-export { getSearchImages };
 
 const BASE_URL = 'https://pixabay.com/api/?key=';
 const KEY = '34585609-92a50f4d35f6702c558d8184b';
@@ -26,3 +25,5 @@ const getSearchImages = async (search, page) => {
     console.error(error);
   }
 };
+
+export { getSearchImages };
