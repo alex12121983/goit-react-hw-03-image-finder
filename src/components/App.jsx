@@ -1,4 +1,5 @@
 import { Component } from 'react'
+import { getSearchImages } from '../api/getSearchImages';
 import Notiflix from 'notiflix';
 import Searchbar from './Searchbar/Searchbar'
 import ImageGallery from './ImageGallery/ImageGallery'
@@ -6,7 +7,7 @@ import Button from './Button/Button'
 import Modal from './Modal/Modal'
 import Loader  from  './Loader/Loader'
 import { Container } from './App.styled';
-import { getSearchImages } from '../api/getSearchImages';
+
 
 class App extends Component {
 	state = { 

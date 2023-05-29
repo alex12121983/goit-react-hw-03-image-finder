@@ -2,7 +2,6 @@ import { Component } from "react";
 import {
     ModalOverlay,
     ModalWindow,
-    ModalImg,
   } from './Modal.styled';
 
 class Modal extends  Component {
@@ -25,8 +24,8 @@ class Modal extends  Component {
     render(){
         const {src} = this.props
         return (
-            <ModalOverlay className="overlay" onClick={this.onBackClick}>
-                <ModalWindow className="modal">
+            <ModalOverlay onClick={this.onBackClick}>
+                <ModalWindow>
                     <img src={src} alt="" />
                 </ModalWindow>
             </ModalOverlay>
