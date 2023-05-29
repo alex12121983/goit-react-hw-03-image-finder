@@ -1,5 +1,5 @@
 import React from 'react'
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import { ListItem, Img } from './ImageGalleryItem.styled';
 
 const ImageGalleryItem = ({
@@ -16,10 +16,8 @@ const ImageGalleryItem = ({
 
 export default ImageGalleryItem
 
-// ImageGalleryItem.propTypes = {
-// 	contact: PropTypes.shape({
-// 		  		name: PropTypes.string.isRequired,
-// 		  		number: PropTypes.string.isRequired,
-// 		  		id: PropTypes.string.isRequired,
-// 		}).isRequired,
-// };
+ImageGalleryItem.propTypes = {
+    smallImgSrc: PropTypes.string.isRequired,
+    largeImgSrc: PropTypes.string.isRequired,
+    openModal: PropTypes.func.isRequired,
+  };

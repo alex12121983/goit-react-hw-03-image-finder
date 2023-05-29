@@ -1,11 +1,13 @@
 import { Component } from 'react'
-import { getSearchImages } from '../api/getSearchImages';
 import Notiflix from 'notiflix';
+
+import { getSearchImages } from '../api/getSearchImages';
+
 import Searchbar from './Searchbar/Searchbar'
 import ImageGallery from './ImageGallery/ImageGallery'
 import Button from './Button/Button'
 import Modal from './Modal/Modal'
-import Loader  from  './Loader/Loader'
+import Loader from  './Loader/Loader'
 import { Container } from './App.styled';
 
 
@@ -95,9 +97,6 @@ class App extends Component {
 		return (
 			<>
 				<Searchbar handleSearch={this.handleSearch} />
-				{/* {this.state.error && 
-					(<div className="alert alert-danger mt-3" role="alert"> {this.state.error} </div>)
-				} */}
 				<Container>
 					<ImageGallery 
 						images={this.state.images}

@@ -1,4 +1,6 @@
 import { Component } from 'react'
+import Notiflix from 'notiflix';
+import PropTypes from 'prop-types';
 import { 
     Header, 
     SearchForm, 
@@ -14,9 +16,15 @@ class Searchbar extends Component {
     handleChange = ({ target: { value } }) => {
         this.setState({ value })
     }
-    handleSubmit = (e) => {
-        e.preventDefault()
+    handleSubmit = (evt) => {
+        evt.preventDefault()
+        if (this.state.value.trim() === '') {
+            return Notiflix.Notify.warning(
+              'Please enter key words for search.',
+            );
+          }
         this.props.handleSearch(this.state.value)
+        this.setState({ value: '' });
     }
     render(){
         return (
@@ -45,3 +53,7 @@ class Searchbar extends Component {
 }
 
 export default Searchbar
+
+Searchbar.propTypes = {
+    handleSubmit: PropTypes.func.isRequired,
+  };
